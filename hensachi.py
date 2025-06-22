@@ -1,20 +1,20 @@
 import streamlit as st
 
-def stdev(data):
+def stdev(data): #標準偏差
     values = list(data.values())
     n = len(values)
     avg = sum(values) / n
     var = sum((x - avg) ** 2 for x in values) / n
     return var ** 0.5
 
-def deviation_value(name, data):
+def deviation_value(name, data): #偏差値
     values = list(data.values())
     avg = sum(values) / len(values)
     return (data[name] - avg) / stdev(data) * 10 + 50
 
-# UI部分
+#UI部分
 st.title("偏差値計算ツール")
-data_input = st.text_area("データを辞書形式で入力（例：{\"A\":56,\"B\":67})")
+data_input = st.text_area("データを辞書形式で入力（例：{"A":56,"B":67,"C":70,"D":30}))
 name = st.text_input("偏差値を調べる名前（例：A）")
 
 if st.button("計算"):
