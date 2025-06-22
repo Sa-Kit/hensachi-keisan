@@ -14,7 +14,7 @@ def deviation_value(name, data): #偏差値
 
 #UI部分
 st.title("偏差値計算")
-data_input = st.text_area("データを辞書形式で入力（例：{\"A\":50,\"B\":65,\"C\":70,\"D\":30}))
+data_input = st.text_area("データを辞書形式で入力（例：{\"A\":50,\"B\":65,\"C\":70,\"D\":30})")
 name = st.text_input("偏差値を調べる名前（例：A）")
 
 if st.button("計算"):
