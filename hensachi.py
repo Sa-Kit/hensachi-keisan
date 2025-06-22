@@ -13,8 +13,8 @@ def deviation_value(name, data): #偏差値
     return (data[name] - avg) / stdev(data) * 10 + 50
 
 #UI部分
-st.title("偏差値計算ツール")
-data_input = st.text_area("データを辞書形式で入力（例：{"A":56,"B":67,"C":70,"D":30}))
+st.title("偏差値計算")
+data_input = st.text_area("データを辞書形式で入力（例：{"A":50,"B":65,"C":70,"D":30}))
 name = st.text_input("偏差値を調べる名前（例：A）")
 
 if st.button("計算"):
